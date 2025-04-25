@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mare_shamgar_portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <script defer src="script.js"></script>
 </head>
+<script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>
+  
 <body>
+    <!-- Hamburger button -->
+<div class="hamburger" onclick="toggleSidebar()">
+    ☰
+  </div>
+  
     <nav class="sidebar">
         <div class="profile">
             <img src="https://i.postimg.cc/pVzGgvFg/photo-shamgar-1.jpg" alt="Photo de profil">
@@ -99,12 +112,12 @@
         <section class="stats">
             <div class="stat-box">
                 <img src="https://i.postimg.cc/Dw6pzcfF/happy.jpg" alt="Happy Clients">
-                <h3>232</h3>
+                <h3>10</h3>
                 <p>Happy Clients</p>
             </div>
             <div class="stat-box">
                 <img src="https://i.postimg.cc/FHNnm64D/document-project.jpg" alt="Projects">
-                <h3>521</h3>
+                <h3>30</h3>
                 <p>Projects Completed</p>
             </div>
             <div class="stat-box">
@@ -114,7 +127,7 @@
             </div>
             <div class="stat-box">
                 <img src="https://i.postimg.cc/xC2XFLHJ/user.jpg" alt="Workers">
-                <h3>32</h3>
+                <h3>04</h3>
                 <p>Hard Workers</p>
             </div>  
         </section>
@@ -127,28 +140,28 @@
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>HTML</span>
-                        <span class="percentage">90%</span>
+                        <span class="percentage">80%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="90"></div>
+                        <div class="skill-progress" data-progress="80"></div>
                     </div>
                 </div>
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>CSS</span>
-                        <span class="percentage">85%</span>
+                        <span class="percentage">75%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
+                        <div class="skill-progress" data-progress="75"></div>
                     </div>
                 </div>
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>JavaScript</span>
-                        <span class="percentage">75%</span>
+                        <span class="percentage">10%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="75"></div>
+                        <div class="skill-progress" data-progress="10"></div>
                     </div>
                 </div>
             </div>
@@ -174,10 +187,10 @@
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>Illustrator</span>
-                        <span class="percentage">65%</span>
+                        <span class="percentage">85%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="65"></div>
+                        <div class="skill-progress" data-progress="85"></div>
                     </div>
                 </div>
             </div>
@@ -195,10 +208,10 @@
             <div class="resume-column experience">
                 <h3 class="resume-heading">Experience</h3>
                 <div class="resume-item">
-                    <div class="resume-date">2023 - Présent</div>
+                    <div class="resume-date">2021-2023</div>
                     <div class="resume-content">
-                        <h4>Développeur Web</h4>
-                        <p>Développement d'interfaces modernes et optimisation UX/UI.</p>
+                        <h4>Gérant de cybercafé</h4>
+                        <p>Gestion et creation des tickets de connexion ,maintenance des outils informatiques,Impression-scannage.</p>
                     </div>
                 </div>
                 <div class="resume-item">
@@ -211,15 +224,15 @@
                 <div class="resume-item">
                     <div class="resume-date">2021 - 2023</div>
                     <div class="resume-content">
-                        <h4>Data Entry Specialist</h4>
-                        <p>Gestion de bases de données et saisie avec une haute précision.</p>
+                        <h4>Formatteur en bureautique chez episervice</h4>
+                        <p>Fournir une formation de qualité aux étudiants et professionnels concernant la maitrise des outils bureautique.</p>
                     </div>
                 </div>
                 <div class="resume-item">
                     <div class="resume-date">2021 - 2023</div>
                     <div class="resume-content">
                         <h4>Data Entry Specialist</h4>
-                        <p>Gestion de bases de données et saisie avec une haute précision.</p>
+                        <p>Création d'affiche,flyers et logo à partir d'une étude bien ordonnée des besoins des clients.</p>
                     </div>
                 </div>
             </div>
@@ -228,31 +241,31 @@
             <div class="resume-column education">
                 <h3 class="resume-heading">Education</h3>
                 <div class="resume-item">
-                    <div class="resume-date">2019 - 2022</div>
+                    <div class="resume-date">2024 - 2027</div>
                     <div class="resume-content">
                         <h4>Licence en Mathématiques</h4>
                         <p>Université spécialisée en sciences appliquées.</p>
                     </div>
                 </div>
                 <div class="resume-item">
-                    <div class="resume-date">2020</div>
+                    <div class="resume-date">2024</div>
                     <div class="resume-content">
                         <h4>Formation Adobe Design</h4>
-                        <p>Certifié en Photoshop, Illustrator et Adobe Express.</p>
+                        <p>Maitrise de Photoshop, Illustrator et Adobe Express.</p>
                     </div>
                 </div>
                 <div class="resume-item">
-                    <div class="resume-date">2020</div>
+                    <div class="resume-date">2024</div>
                     <div class="resume-content">
-                        <h4>Formation Adobe Design</h4>
-                        <p>Certifié en Photoshop, Illustrator et Adobe Express.</p>
+                        <h4>Formation en developpement web front end</h4>
+                        <p>Maitrise du Html,Css et les bases du JavaScript.</p>
                     </div>
                 </div>
                 <div class="resume-item">
-                    <div class="resume-date">2020</div>
+                    <div class="resume-date">2025</div>
                     <div class="resume-content">
-                        <h4>Formation Adobe Design</h4>
-                        <p>Certifié en Photoshop, Illustrator et Adobe Express.</p>
+                        <h4>Formation en Marketing Digital chez coursera</h4>
+                        <p>Mise en place d'une stratégie de Marketing Digital et Gestion des risques.</p>
                     </div>
                 </div>
             </div>

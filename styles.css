@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 /* Styles de la barre de navigation */
 .sidebar {
     position: fixed;
@@ -17,7 +22,7 @@
 .profile {
     text-align: center;
     margin-bottom: 30px;
-    padding: 20px;
+    padding-top: 10px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
@@ -30,6 +35,7 @@
     object-fit: cover;
     display: block;
     margin: 0 auto;
+    margin-top: 0px;
 }
 
 /* Vérifier si l'image n'est pas chargée et cacher l'élément */
@@ -300,21 +306,6 @@ section {
     margin-top: 20px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-info {
-        justify-content: center;
-    }
-}
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -457,11 +448,7 @@ p {
     font-size: 16px;
     color: #444;
 }
-@media (max-width: 768px) {
-    .resume-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /*Mes services */
 .services {
@@ -667,3 +654,20 @@ p {
 .view-btn:hover {
     background-color: #ff2f00da;
 }
+/* ----- Hamburger styles ----- */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* ----- Sidebar transition ----- */
+  .sidebar {
+    transition: left 0.3s ease;
+  }
+  
+  
