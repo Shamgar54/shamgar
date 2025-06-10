@@ -1,3 +1,8 @@
+body
+{
+    background-color: #f4f4f4;
+    margin-right: .0;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +15,8 @@
     top: 0;
     width: 250px;
     height: 100%;
-    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Belle couleur bleue */
+ background: linear-gradient(135deg, #1e3c72, #2a5298); /* Belle couleur bleue */
+
     color: white;
     padding: 20px;
     display: flex;
@@ -80,7 +86,7 @@ ul li a:hover, ul li a.active {
 /* Styles du contenu */
 .content {
     margin-left: 270px;
-    padding: 20px;
+    padding: 0px;
     font-family: 'Poppins', sans-serif;
 }
 .sidebar ul li a {
@@ -100,7 +106,8 @@ ul li a:hover, ul li a.active {
 
 /* Section Home avec image de fond */
 #home {
-    height: 100vh;
+    height: 10vh;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +115,9 @@ ul li a:hover, ul li a.active {
     color: white;
     font-size: 32px;
     font-weight: bold;
-    background: url('URL_DE_TA_PHOTO') no-repeat center center/cover;
+    background-size: 100%;
+    background-image: url('images/shamgar.jpg') no-repeat center center/cover;
+    background-position: center bottom 150px;
     position: relative;
 }
 
@@ -117,8 +126,8 @@ ul li a:hover, ul li a.active {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     background: rgba(0, 0, 0, 0.5); /* Effet foncé pour le texte */
 }
 
@@ -158,9 +167,11 @@ section {
     color: white;
     font-size: 32px;
     font-weight: bold;
-    background: url('URL_DE_TA_PHOTO') no-repeat center center/cover;
+    background: url('images/shamgar.jpg') no-repeat center center/55%;
     position: relative;
     padding: 50px;
+    
+    
 }
 
 #home::before {
@@ -176,6 +187,7 @@ section {
 .home-content {
     position: relative;
     z-index: 1;
+   
 }
 
 #user-name {
@@ -233,7 +245,13 @@ section {
 .about-description {
     font-size: 18px;
     color: #555;
+    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align: center;
+    
 }
 
 /* Conteneur principal */
@@ -243,6 +261,7 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: left;
+    background: #f4f4f4;
 }
 
 /* Image */
@@ -262,6 +281,8 @@ section {
 .about-text {
     flex: 1;
     padding: 20px;
+        background: #f4f4f4;
+    
 }
 
 .about-text h3 {
@@ -271,27 +292,23 @@ section {
     margin-bottom: 10px;
 }
 
-.about-intro {
-    font-size: 18px;
-    color: #444;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
 /* Informations */
 .about-info {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+   
 }
 
 .about-info div {
     flex: 1 1 45%;
     font-size: 16px;
-    background: #fff;
+    background: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
-    border-left: 4px solid #1e3c72;
+    border-left: 4px solid orange;
+    
+   
 }
 
 .about-info div span {
@@ -313,14 +330,15 @@ section {
     margin-top: -250px;
     text-align: center;
     padding: 40px 20px;
-    background: #f9f9f9;
+    background: #f4f4f4;
     border-radius: 10px;
 }
 .stat-box {
     background: white;
     padding: 20px;
+    max-width: 150px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: #f4f4f4;
     transition: transform 0.3s ease;
 }
 .stat-box:hover {
@@ -341,7 +359,7 @@ p {
 .skills {
     margin-top: -500px;
     padding: 50px 20px;
-    background: #f9f9f9;
+    background: #f4f4f4;
     border-radius: 10px;
     text-align: center;
 }
@@ -430,6 +448,7 @@ p {
     padding: 15px;
     border-left: 4px solid #ff5e00;
     transition: transform 0.3s ease-in-out;
+    
 }
 .resume-item:hover {
     transform: translateX(10px);
@@ -451,6 +470,7 @@ p {
 
 
 /*Mes services */
+
 .services {
     margin-top: 300px;
     padding: 60px 20px;
@@ -507,6 +527,7 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    background: #f4f4f4;
 }
 .contact-info, .contact-form {
     flex: 1;
@@ -544,21 +565,21 @@ p {
 /* Style de base pour le portfolio */
 .portfolio {
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
 .portfolio .container {
     max-width: 1200px;
-
     margin-top: 80px ;
     padding: 0 15px;
+    background: #f4f4f4;
 }
 
 .portfolio .section-title {
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: 30px;
     margin-bottom: 20px;
-    color: #333;
+    font-weight: bold;
+    color: #444;
 }
 
 .portfolio .section-description {
@@ -566,6 +587,8 @@ p {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 50px;
+    font-size: 16px;
+    color: #444;
 }
 
 /* Style pour les filtres */
@@ -593,20 +616,21 @@ p {
 .portfolio-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
+    
 }
 
 .portfolio-item {
     background: orange;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     flex: 1 1 250px;
-    max-height: 350px;
-    max-width: 450px;
+    max-height: auto;
+    max-width: 350px;
     overflow: hidden;
+    padding: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -626,7 +650,7 @@ p {
 }
 
 .portfolio-info {
-    padding: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -652,7 +676,7 @@ p {
 }
 
 .view-btn:hover {
-    background-color: #ff2f00da;
+    background-color: #F57C00;
 }
 /* ----- Hamburger styles ----- */
 .hamburger {
@@ -669,5 +693,4 @@ p {
   .sidebar {
     transition: left 0.3s ease;
   }
-  
   

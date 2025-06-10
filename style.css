@@ -1,4 +1,7 @@
-@media (max-width: 767px) {
+@media (min-width:480px) and (max-width: 768px) {
+  #home{
+    background: url('images/shamgar.jpg') no-repeat center center/100%;
+  }
   .sidebar {
       width: 100%; /* Utiliser toute la largeur de l'écran */
       position: absolute;
@@ -19,45 +22,27 @@
   .hamburger:active + .sidebar {
       left: 0; /* Ouvre la sidebar au clic */
   }
-  section,
-  .section,
-  header,
-  footer,
-  .container,
-  .content,
-  .about,
-  .services,
-  .portfolio,
-  .resume,
-  .contact {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  /* ----- Hamburger styles ----- */
-.hamburger {
+ /* ----- Hamburger styles ----- */
+ .hamburger {
   display: none;
   font-size: 28px;
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   cursor: pointer;
   z-index: 1001;
-}
+  width: 250px;
+  height: 300px;
+  color: orange;
+  font-size: 40px;
+  border-radius: 6px;
+ }
 
-/* ----- Sidebar transition ----- */
-.sidebar {
+ /* ----- Sidebar transition ----- */
+ .sidebar {
   transition: left 0.3s ease;
-}
+ }
 
-/* ----- Responsive pour petits écrans ----- */
-@media (max-width: 768px) {
   .hamburger {
     display: block;
   }
@@ -76,6 +61,116 @@
   .sidebar.show {
     left: 0;
   }
+
+}
+/* Préloader */
+#preloader {
+  
+  position: fixed;
+  inset: 0;
+background-color: #14213D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.5s ease;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+#welcome{
+  color: white;
+}
+.loader-container h1 {
+  font-size: 2.2rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.loader-container p {
+  font-size: 1.1rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.loader-bar {
+  width: 80%;
+  max-width: 300px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.loader-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: #007bff;
+  animation: loading 3s linear forwards;
+  border-radius: 10px;
+}
+
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*petits telephones */
+@media (max-width: 480px)  {
+  .loader-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .loader-container p {
+    font-size: 0.95rem;
+  }
+
+  .loader-bar {
+    height: 5px;
+  }
+}
+
+@media (min-width:480px) and (max-width: 768px) {
+  .loader-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .loader-container p {
+    font-size: 1rem;
+  }
+
+  .loader-bar {
+    height: 6px;
+  }
+  
+  section,
+  .section,
+  header,
+  footer,
+  .container,
+  .content,
+  .about,
+  .services,
+  .portfolio,
+  .resume,
+  .contact {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+  }
+
+  body {
+    margin-left: 0;
+    padding-left: 0;
+  }
+ 
 
   main {
     margin-left: 0;
@@ -116,9 +211,9 @@
     padding: 0.6rem 1.2rem;
     font-size: 1rem;
   }
-}
-/* Responsive */
-@media (max-width: 768px) {
+ body{
+    font-size: 5px;
+  }
   .about-content {
       flex-direction: column;
       text-align: center;
@@ -138,40 +233,69 @@
   {
     margin-left: 10px;
   }
-
+  
  .home-content
  {
   margin-left: 10px;
  }
  .container
    {
-    margin-top: 200px;
+    margin-top: 90vh;
   }
   .stats
   {
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 90vh;
   }
-  #skills .container
+  #skills 
   {
-    margin-top: 750px;
+    margin-top: -200px;
   }
   #resume .container
-  {
+   {
     margin-top: 1300px;
-  }
+   }
+   .resume-column{
+   margin-left: 20px;
+   padding-left: 20px;
+   margin-right: 20px;
+   padding-right: 20px;
+   }
    #portfolio .container
    {
-    margin-top: 2600px;
+    margin-top: 450vh; 
+    
    }
    #services .container
    {
-    margin-top: 3000px;
+    margin-top: 550vh;
    }
+   .portfolio-item:hover {
+    transform: translateX(-10px);
+}
+   .portfolio-info {
+    text-align: center;
+}
+   .portfolio-items{
+    height: 90%;
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+    padding-left: 100px;
+    
+   }
+
+   .services-grid{
+    max-width: 350px;
+    max-height: 250px;
+    padding-left: 50px;
+    justify-content: center;
+   }
+   
    #contact .container
    {
-    margin-top: 3600px;
+    margin-top: 850vh;
    }
    ul li
    {
@@ -201,29 +325,6 @@
     transition: transform 0.3s ease;
   }
 }
-}
-/*pour les petits ecrans iphone,samsung galaxy*/
-@media screen and (max-width:360px) and (max-height:640px){
-  .container{
-    margin-top: 500px;
-  }
-  .stats{
-    padding-top: 0px;
-    margin-top: 600px;
-  }
-  #resume .container{
-    padding-top: 0%;
-    margin-top: 1800px;
-  }
-  #portfolio .container{
-    margin-top: 3500px;
-  }
-  #services .container{
-    margin-top: 3900px;
-  }
-  #contact .container
-   {
-    padding-top: 0px;
-    margin-top: 4500px;
-   }
-}
+
+
+

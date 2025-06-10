@@ -102,3 +102,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const preloader = document.getElementById("preloader");
+    const siteContent = document.getElementById("site-content");
+
+    // Cache le préloader
+    preloader.style.display = "none";
+
+    // Affiche le site
+    siteContent.style.display = "block";
+  }, 5000); // Attendre 5 secondes
+});
+
+
