@@ -2,6 +2,9 @@ body
 {
     background-color: #f4f4f4;
     margin-right: .0;
+    background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 * {
     box-sizing: border-box;
@@ -15,8 +18,7 @@ body
     top: 0;
     width: 250px;
     height: 100%;
- background: linear-gradient(135deg, #1e3c72, #2a5298); /* Belle couleur bleue */
-
+      background: var(--sidebar-bg);
     color: white;
     padding: 20px;
     display: flex;
@@ -31,6 +33,10 @@ body
     padding-top: 10px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+}
+.profile h3
+{
+    color: var(--username-text);
 }
 
 .profile img {
@@ -94,7 +100,7 @@ ul li a:hover, ul li a.active {
     align-items: center;
     gap: 12px; /* Espace entre l'icône et le texte */
     font-size: 18px;
-    color: white;
+    color: var(--sidebar-text);
     text-decoration: none;
     padding: 12px;
 }
@@ -192,6 +198,7 @@ section {
 
 #user-name {
     font-size: 40px;
+    color: white;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -223,7 +230,7 @@ section {
 /* Section About */
 #about {
     padding: 60px 20px;
-    background: #f9f9f9;
+    background: var(--mode-bg);
 }
 
 .container {
@@ -259,7 +266,7 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: left;
-    background: #f4f4f4;
+    background: var(--mode-bg);
 }
 
 /* Image */
@@ -279,7 +286,7 @@ section {
 .about-text {
     flex: 1;
     padding: 20px;
-        background: #f4f4f4;
+        background: var(--mode-bg);
     
 }
 
@@ -301,7 +308,7 @@ section {
 .about-info div {
     flex: 1 1 45%;
     font-size: 16px;
-    background: #f4f4f4;
+    background: var(--mode-bg);
     padding: 10px;
     border-radius: 5px;
     border-left: 4px solid orange;
@@ -328,7 +335,7 @@ section {
     margin-top: -250px;
     text-align: center;
     padding: 40px 20px;
-    background: #f4f4f4;
+    background: var(--mode-bg);
     border-radius: 10px;
 }
 .stat-box {
@@ -336,7 +343,7 @@ section {
     padding: 20px;
     max-width: 150px;
     border-radius: 8px;
-    box-shadow: #f4f4f4;
+    box-shadow: var(--mode-bg);
     transition: transform 0.3s ease;
 }
 .stat-box:hover {
@@ -357,7 +364,7 @@ p {
 .skills {
     margin-top: -500px;
     padding: 50px 20px;
-    background: #f4f4f4;
+    background: var(--mode-bg);
     border-radius: 10px;
     text-align: center;
 }
@@ -405,7 +412,7 @@ p {
 /*partie resume*/
 .resume {
     padding: 60px 20px;
-    background: #f4f4f4;
+    background: var(--mode-bg);
     text-align: center;
 }
 .section-title {
@@ -473,7 +480,7 @@ p {
 .services {
     margin-top: 300px;
     padding: 60px 20px;
-    background: #f4f4f4;
+    background: var(--mode-bg);
     text-align: center;
 }
 .section-title {
@@ -512,7 +519,7 @@ p {
 /*section contact*/
 .contact {
     padding: 60px 20px;
-    background: #f4f4f4;
+    background: var(--mode-bg);
     text-align: center;
 }
 .section-title {
@@ -526,7 +533,7 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: #f4f4f4;
+    background: var(--mode-bg);
 }
 .contact-info, .contact-form {
     flex: 1;
@@ -564,14 +571,14 @@ p {
 /* Style de base pour le portfolio */
 .portfolio {
     padding: 50px 0;
-    background-color: #f4f4f4;
+    background-color: var(--mode-bg);
 }
 
 .portfolio .container {
     max-width: 1200px;
     margin-top: 80px ;
     padding: 0 15px;
-    background: #f4f4f4;
+    background: var(--mode-bg);
 }
 
 .portfolio .section-title {
@@ -695,8 +702,8 @@ p {
   /*pied de page*/
   /* Styles du pied de page */
 .site-footer {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: white;
+    background: var(--footer-bg);
+    color: var(--footer-text);
     padding: 30px 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -714,18 +721,17 @@ p {
 .footer-left h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: white;
-}
+    color: var(--footer-text);}
 
 .footer-passion {
     font-style: italic;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--footer-text);
 }
 
 .footer-right h4 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #ff8c00;
+    color: var(--footer-text);
 }
 
 .social-links {
@@ -737,7 +743,7 @@ p {
 .social-link {
     display: flex;
     align-items: center;
-    color: white;
+    color: var(--footer-text);
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -750,4 +756,101 @@ p {
 .social-link i {
     width: 30px;
     font-size: 18px;
+}
+/*mode sombre et clair*/
+/* Style du switch */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a5298;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: black;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff8c00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.theme-switch-label i {
+  font-size: 20px;
+  color: var(--swicth-color);
+}
+
+/* Thème alternatif - à appliquer via JS */
+:root {
+  --primary-color: #1e3c72;
+  --secondary-color: #2a5298;
+  --accent-color: #ff8c00;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --swicth-color:orange;
+  --sidebar-bg:linear-gradient(135deg, #1e3c72, #2a5298);
+  --footer-bg:linear-gradient(135deg, #1e3c72, #2a5298);
+  --footer-text:white;
+  --hamburger:orange;
+  --card-bg: #fff;
+}
+
+[data-theme="alternate"] {
+  /* Thème orange clair */
+  --primary-color: #ff9500;
+  --secondary-color: #ffaa44;
+  --accent-color: #1e3c72; /* Le bleu devient l'accent */
+  --text-color: #333;
+  --bg-color: #fff8f0;
+  --card-bg: #fff;
+  
+  /* Couleurs spécifiques */
+  --sidebar-bg: linear-gradient(135deg, #ff9500, #ffaa44);
+   --footer-bg:linear-gradient(135deg, #ff9500, #ffaa44);
+   --swicth-color:black;
+   --footer-text:black;
+   --sidebar-text:black;
+   --mode-bg:#fff8f0;
+   --username-text:black;
+   --hamburger:black;
+  --stats-bg: #fff;
+  --button-bg: #1e3c72;
+  --button-hover: #2a5298;
 }

@@ -131,5 +131,25 @@ window.addEventListener("load", function () {
     siteContent.style.display = "block";
   }, 5000); // Attendre 5 secondes
 });
+//mode sombre et clair
+// Gestion du thème alternatif
+const themeCheckbox = document.getElementById('theme-checkbox');
+const savedTheme = localStorage.getItem('theme') || 'default';
 
+// Initialisation
+if (savedTheme === 'alternate') {
+  themeCheckbox.checked = true;
+  document.documentElement.setAttribute('data-theme', 'alternate');
+}
+
+// Écouteur d'événement
+themeCheckbox.addEventListener('change', function() {
+  if (this.checked) {
+    document.documentElement.setAttribute('data-theme', 'alternate');
+    localStorage.setItem('theme', 'alternate');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'default');
+  }
+});
 
