@@ -1,4 +1,4 @@
-@media (min-width:480px) and (max-width: 768px) {
+@media (max-width: 768px) {
   #home{
     background: url('images/shamgar.jpg') no-repeat center center/100%;
   }
@@ -27,25 +27,21 @@
   display: none;
   font-size: 28px;
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 3.5px;
+  left: 0;
   cursor: pointer;
   z-index: 1001;
-  width: 250px;
-  height: 300px;
+  height: 50px;
   color: orange;
   font-size: 40px;
-  border-radius: 6px;
+  border-radius: 0.5rem;
+  display: block;
  }
 
  /* ----- Sidebar transition ----- */
  .sidebar {
   transition: left 0.3s ease;
  }
-
-  .hamburger {
-    display: block;
-  }
 
   .sidebar {
     position: fixed;
@@ -68,7 +64,7 @@
   
   position: fixed;
   inset: 0;
-background-color: #14213D;
+  background-color: #14213D;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,19 +117,284 @@ background-color: #14213D;
   }
 }
 /*petits telephones */
-@media (max-width: 480px)  {
+@media (max-width: 480px) {
+  /* Préloader */
+  #preloader {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #14213D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+    padding: 10px;
+  }
   .loader-container h1 {
     font-size: 1.4rem;
+    line-height: 1.3;
   }
-
   .loader-container p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
-  .loader-bar {
-    height: 5px;
+  /* Layout général */
+  body {
+    font-size: 14px;
   }
+  .content {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 60%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .sidebar.show {
+    left: 0;
+  }
+  .hamburger {
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    z-index: 1001;
+  }
+
+  /* Section Home */
+  #home {
+    background-size: cover;
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  #home::before {
+    width: 100%;
+    height: 100%;
+  }
+  .home-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  #user-name {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+  .typing-container {
+    font-size: 1.2rem;
+  }
+
+  /* Section About */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-img img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .about-text {
+    text-align: center;
+    padding: 10px;
+  }
+  .about-info {
+    flex-direction: column;
+  }
+  .about-info div {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Stats */
+  .stats {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .stat-box {
+    max-width: 100%;
+  }
+
+  /* Skills */
+  #skills {
+    margin-top: 30px;
+  }
+  .skills-content {
+    flex-direction: column;
+  }
+  .skills-left, .skills-right {
+    width: 100%;
+    min-width: auto;
+  }
+  .skill-item {
+    margin-bottom: 15px;
+  }
+  .skill-bar {
+    margin-right: 0;
+  }
+
+  /* Resume */
+  #resume .container {
+    margin-top: 30px;
+  }
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .resume-column {
+    margin: 0;
+    padding: 15px;
+  }
+  .resume-date {
+    display: none;
+  }
+  .resume-item {
+    flex-direction: column;
+    padding-left: 0;
+    border-left: none;
+    gap: 5px;
+  }
+  .resume-heading {
+    font-size: 18px;
+    text-align: center;
+  }
+  .resume-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+
+  /* Portfolio */
+  #portfolio .container {
+    margin-top: 30px;
+  }
+  .portfolio-items {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .portfolio-item {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .portfolio-filters {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+  .filter-btn {
+    margin: 10px;
+  }
+
+  /* Services */
+  #services .container {
+    margin-top: 30px;
+  }
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .service-item {
+    max-width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Contact */
+  #contact .container {
+    margin-top: 30px;
+  }
+  .contact-grid {
+    flex-direction: column;
+  }
+  .contact-info, .contact-form {
+    width: 100%;
+    padding: 15px;
+  }
+  .map-container iframe {
+    height: 200px;
+  }
+
+  /* Corrections générales */
+  .section-title {
+    font-size: 24px;
+  }
+  section {
+    height: auto;
+    padding: 40px 0;
+  }
+  
+    .site-footer {
+        padding: 25px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .footer-left h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .footer-passion {
+        text-align: center;
+        display: block;
+    }
+
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer-right h4 {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-link {
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 15px;
+        border-radius: 8px;
+        min-width: 80px;
+    }
+
+    .social-link i {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .social-link span {
+        font-size: 12px;
+    }
 }
+
+
 
 @media (min-width:480px) and (max-width: 768px) {
   .loader-container h1 {
@@ -162,8 +423,7 @@ background-color: #14213D;
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding-left: 0 !important;
-    padding-right: 0 !important;
-    
+    padding-right: 0 !important;    
   }
 
   body {
@@ -212,7 +472,10 @@ background-color: #14213D;
     font-size: 1rem;
   }
  body{
-    font-size: 5px;
+  display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    font-size: 10px;
   }
   .about-content {
       flex-direction: column;
@@ -309,6 +572,7 @@ background-color: #14213D;
    }
    .portfolio-filters .filter-btn
    {
+    padding-top: auto;
     margin-bottom:10px ;
    }
    .service-item
@@ -324,6 +588,94 @@ background-color: #14213D;
     overflow: hidden;
     transition: transform 0.3s ease;
   }
+  /*footer du site*/
+  .site-footer {
+          margin-top: 450vh;
+        padding: 30px 0;
+        background: linear-gradient(135deg, #1a3361, #22478a); /* Dégradé légèrement plus clair */
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-left {
+        padding-right: 15px;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-left h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: #ff8c00; /* Orange pour le nom */
+    }
+
+    .footer-passion {
+        font-size: 15px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .footer-right {
+        padding-left: 25px;
+    }
+
+    .footer-right h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: white;
+        position: relative;
+        padding-bottom: 8px;
+    }
+
+    .footer-right h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #ff8c00;
+    }
+
+    .social-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+        background: rgba(255, 140, 0, 0.15);
+        transform: translateX(5px);
+    }
+
+    .social-link i {
+        width: 25px;
+        font-size: 16px;
+        margin-right: 10px;
+        color: #ff8c00;
+    }
+
+    .social-link span {
+        font-size: 14px;
+    }
 }
 
 

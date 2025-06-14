@@ -30,6 +30,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const hamburger = document.querySelector('.hamburger');
+  
+  sidebar.classList.toggle('open');
+  hamburger.classList.toggle('open');
+  document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : 'auto';
+  
+  // Fermer automatiquement en cliquant sur un lien (conservez ce code existant)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    });
+  });
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
